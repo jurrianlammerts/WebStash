@@ -5,10 +5,14 @@ import useScroll from "@/lib/hooks/use-scroll";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 import { Session } from "next-auth";
+import { usePathname } from "next/navigation";
 
 export default function NavBar({ session }: { session: Session | null }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
+  const pathname = usePathname();
   const scrolled = useScroll(50);
+
+  const isLoginPage = pathname === "/auth";
 
   return (
     <>
@@ -24,18 +28,20 @@ export default function NavBar({ session }: { session: Session | null }) {
           <Link href="/" className="flex items-center font-display text-2xl">
             <p>WebStash</p>
           </Link>
-          <div>
-            {session ? (
-              <UserDropdown session={session} />
-            ) : (
-              <button
-                className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                onClick={() => setShowSignInModal(true)}
-              >
-                Sign In
-              </button>
-            )}
-          </div>
+          {!isLoginPage && (
+            <div>
+              {session ? (
+                <UserDropdown session={session} />
+              ) : (
+                <button
+                  className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                  onClick={() => setShowSignInModal(true)}
+                >
+                  Sign In
+                </button>
+              )}
+            </div>
+          )}
         </div>
       </div>
     </>

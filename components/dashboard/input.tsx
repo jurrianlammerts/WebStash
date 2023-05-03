@@ -3,7 +3,6 @@
 import { toast } from "@/lib/hooks/use-toast";
 import { formatUrlToTitle } from "@/lib/utils";
 import classNames from "classnames";
-import { PlusIcon } from "lucide-react";
 import { useState } from "react";
 import { Plus } from "../ui/icons";
 

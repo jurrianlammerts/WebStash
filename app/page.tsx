@@ -1,6 +1,5 @@
 import CtaButton from "@/components/home/cta-button";
 import { buttonVariants } from "@/components/ui/button";
-import Github from "@/components/ui/icons/github";
 import { authOptions } from "@/lib/auth";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "config/site";
@@ -18,15 +17,6 @@ export default async function Home() {
         className="flex h-full flex-col items-center justify-center"
       >
         <div className="w-full px-5 text-center xl:px-0">
-          <Link
-            href={siteConfig.links.github}
-            className="mx-auto flex w-fit animate-fade-up flex-row items-center justify-center rounded-2xl bg-slate-200 px-4 py-1.5 text-sm font-medium opacity-0 transition-colors duration-200 ease-in-out hover:bg-slate-300"
-            target="_blank"
-            style={{ animationDelay: "0s", animationFillMode: "forwards" }}
-          >
-            <Github />
-            <span className="ml-2">Github</span>
-          </Link>
           <div className="mx-auto max-w-[64rem]">
             <h1
               className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"

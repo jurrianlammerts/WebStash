@@ -40,6 +40,7 @@ export default async function RootLayout({
         </Suspense>
         <main className="min-h-screen w-full py-32">{children}</main>
         <Footer />
+        
         <Analytics />
         <Toaster />
       </body>
