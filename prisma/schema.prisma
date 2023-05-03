@@ -51,6 +51,20 @@ model Bookmark {
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  listId    String?
+  List      List?    @relation(fields: [listId], references: [id])
+
+  @@index([userId])
+}
+
+model List {
+  id        String     @id @default(cuid())
+  name      String
+  userId    String
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  bookmarks Bookmark[]
 
   @@index([userId])
 }
@@ -63,7 +77,8 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  bookmarks     Bookmark[]
+  lists          List[]
+  bookmarks      Bookmark[]
 }
 
 model VerificationToken {

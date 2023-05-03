@@ -1,4 +1,6 @@
 import ms from "ms";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export const timeAgo = (timestamp: Date, timeOnly?: boolean): string => {
   if (!timestamp) return "never";
@@ -45,3 +47,7 @@ export const formatUrlToTitle = (url: string) => {
 
   return title;
 };
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}

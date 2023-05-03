@@ -8,6 +8,33 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        background: "#fff",
+        foreground: "#0f172a",
+        primary: {
+          DEFAULT: "#0f172a",
+          foreground: "#f8fafc",
+        },
+        secondary: {
+          DEFAULT: "#f1f5f9",
+          foreground: "#0f172a",
+        },
+        destructive: {
+          DEFAULT: "#ff0000",
+          foreground: "#f8fafc",
+        },
+        accent: {
+          DEFAULT: "#0f172a",
+          foreground: "#f8fafc",
+        },
+      },
+      container: {
+        center: true,
+        padding: "2rem",
+        screens: {
+          "2xl": "1400px",
+        },
+      },
       zIndex: {
         "-1": "-1",
       },
