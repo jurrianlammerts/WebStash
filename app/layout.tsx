@@ -6,6 +6,7 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
+import FallbackNavBar from "@/components/layout/fallback-navbar";
 
 export const metadata = {
   title: "WebStash",
@@ -34,13 +35,13 @@ export default async function RootLayout({
       </head>
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="pointer-events-none fixed -z-1 h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
-        <Suspense fallback="...">
+        <Suspense fallback={<FallbackNavBar />}>
           {/* @ts-expect-error Server Component */}
           <Nav />
         </Suspense>
         <main className="min-h-screen w-full py-32">{children}</main>
         <Footer />
-        
+
         <Analytics />
         <Toaster />
       </body>
