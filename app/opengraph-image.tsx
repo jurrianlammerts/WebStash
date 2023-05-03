@@ -2,7 +2,8 @@
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
-export const alt = "BMRKS - A home for your internet discoveries.";
+export const alt =
+  "WebStash - An open source application built using the new router, server components and everything new in Next.js 13.";
 export const contentType = "image/png";
 
 export default async function OG() {
@@ -42,7 +43,7 @@ export default async function OG() {
             letterSpacing: "-0.02em",
           }}
         >
-          BMRKS
+          WebStash
         </h1>
       </div>
     ),

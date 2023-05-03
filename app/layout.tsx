@@ -8,12 +8,14 @@ import { Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
-  title: "BMRKS",
-  description: "A home for your internet discoveries.",
+  title: "WebStash",
+  description:
+    "An open source application built using the new router, server components and everything new in Next.js 13.",
   twitter: {
     card: "summary_large_image",
-    title: "BMRKS",
-    description: "A home for your internet discoveries.",
+    title: "WebStash",
+    description:
+      "An open source application built using the new router, server components and everything new in Next.js 13.",
     creator: "Jurrian Lammerts",
   },
   metadataBase: new URL("http://localhost:3000/"),

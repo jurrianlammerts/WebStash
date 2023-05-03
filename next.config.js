@@ -12,7 +12,7 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/jurrianlammerts/bmrks",
+        destination: "https://github.com/jurrianlammerts/WebStash",
         permanent: false,
       },
     ];
