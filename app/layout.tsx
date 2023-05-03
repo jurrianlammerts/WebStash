@@ -9,7 +9,7 @@ import { Toaster } from "@/components/ui/toaster";
 import FallbackNavBar from "@/components/layout/fallback-navbar";
 
 export const metadata = {
-  title: "WebStash",
+  title: "WebStash - The Ultimate One Click Tool to Organize Your Bookmarks",
   description:
     "An open source application built using the new router, server components and everything new in Next.js 13.",
   twitter: {
