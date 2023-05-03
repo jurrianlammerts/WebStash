@@ -5,8 +5,9 @@ import { formatUrlToTitle } from "@/lib/utils";
 import classNames from "classnames";
 import { PlusIcon } from "lucide-react";
 import { useState } from "react";
+import { Plus } from "../ui/icons";
 
-export default function InsertInput() {
+export default function Input() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -24,10 +25,7 @@ export default function InsertInput() {
               },
             )}
           >
-            <PlusIcon
-              className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 transform"
-              color="#9ca3af"
-            />
+            <Plus />
             <input
               onChange={() => setError(false)}
               disabled={isLoading}

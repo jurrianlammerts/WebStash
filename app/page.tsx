@@ -1,5 +1,4 @@
 import CtaButton from "@/components/home/cta-button";
-import { useSignInModal } from "@/components/layout/sign-in-modal";
 import { buttonVariants } from "@/components/ui/button";
 import Github from "@/components/ui/icons/github";
 import { authOptions } from "@/lib/auth";
@@ -44,7 +43,7 @@ export default async function Home() {
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
               <Balancer>
-                I'm building a web app with Next.js 13 and open sourcing
+                I&apos;m building a web app with Next.js 13 and open sourcing
                 everything. Follow along as we figure this out together.
               </Balancer>
             </p>
