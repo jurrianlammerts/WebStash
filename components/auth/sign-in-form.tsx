@@ -13,15 +13,15 @@ export default function SignInForm() {
   const [email, setEmail] = useState("");
 
   return (
-    <div className="w-full overflow-hidden shadow-xl md:max-w-md md:rounded-2xl md:border md:border-gray-200">
-      <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 bg-white px-4 py-6 pt-8 text-center md:px-16">
+    <div className="w-full overflow-hidden md:max-w-md md:rounded-2xl md:border md:border-gray-200 md:shadow-xl">
+      <div className="flex flex-col items-center justify-center space-y-3 px-4 py-6 pt-8 text-center md:border-b md:border-gray-200 md:bg-white md:px-16">
         <h3 className="font-display text-2xl font-bold">Sign In</h3>
         <p className="text-sm text-gray-500">
           Only your email and profile picture will be stored.
         </p>
       </div>
 
-      <div className="flex flex-col space-y-4 bg-gray-50 px-4 py-8 md:px-16">
+      <div className="flex flex-col space-y-4 md:bg-gray-50 px-4 py-8 md:px-16">
         <input
           disabled={isLoading.email}
           onChange={(e) => setEmail(e.target.value)}
