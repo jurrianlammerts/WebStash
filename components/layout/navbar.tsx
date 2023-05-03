@@ -6,6 +6,8 @@ import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 import { Session } from "next-auth";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "../ui/button";
 
 export default function NavBar({ session }: { session: Session | null }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -34,7 +36,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 <UserDropdown session={session} />
               ) : (
                 <button
-                  className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
+                  className={cn(buttonVariants({ size: "sm" }))}
                   onClick={() => setShowSignInModal(true)}
                 >
                   Sign In
