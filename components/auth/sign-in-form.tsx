@@ -33,6 +33,7 @@ export default function SignInForm() {
         />
         <button
           disabled={isLoading.email}
+          type="submit"
           className={`${
             isLoading.email
               ? "cursor-not-allowed border-gray-200 bg-gray-100"

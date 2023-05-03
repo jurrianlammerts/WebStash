@@ -9,7 +9,6 @@ export const authOptions: NextAuthOptions = {
   theme: {
     colorScheme: "light",
     logo: "/logo.png",
-    buttonText: 'Back to site'
   },
   providers: [
     GoogleProvider({
